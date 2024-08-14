@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featured-products {
+  margin-bottom: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+button {
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+
+
+
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Promosi Produk</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+   <marquee width="50%"><h1>Promosi Produk</h1></marquee>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="product.html">Produk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Selamat Datang di Penawaran Terbaik Kami!</h2>
+      <p>Temukan penawaran menarik dan produk terbaru di sini.</p>
+    </section>
+
+    <section class="featured-products">
+      <h2>Produk Terbaru</h2>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Produk 1">
+        <h3>Produk 1</h3>
+        <p>Harga: Rp100.000</p>
+        <a href="product.html?id=1">Lihat Detail</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Produk 2">
+        <h3>Produk 2</h3>
+        <p>Harga: Rp200.000</p>
+        <a href="product.html?id=2">Lihat Detail</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Daftar untuk Penawaran Spesial</h2>
+      <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Email Anda" required>
+        <button type="submit">Daftar</button>
+      </form>
+      <p id="form-message"></p>
+    </section>
+  </main>
+
+  <footer>
+   <P><small><a href="https://www.facebook.com/profile.php?id=61558576457158">https://www.facebook.com/profile.php?id=61558576457158"</a></small></P>
+
+   <P><small><a href="ihap968@gmail.com">ihap968@gmail.com</a></small></P>
+   <p>0878-7047-7738</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  document.getElementById('form-message').innerText = `Terima kasih, ${email}! Anda telah terdaftar untuk penawaran spesial.`;
+  document.getElementById('newsletter-form').reset();
+});
+
+  </script>
+</body>
+</html>
